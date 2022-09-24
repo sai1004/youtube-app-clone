@@ -1,0 +1,50 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.search__query {
+    height: 36px;
+    width: 350px;
+    padding: 8px;
+    color: white;
+    border: none;
+    // border-radius: 20px;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.search__query:focus {
+    outline: 1px solid blue;
+}
+
+mat-sidenav {
+    width: 220px;
+    color: white;
+}
+
+mat-sidenav-container,
+mat-sidenav-content {
+    height: 100vh;
+}
+
+mat-sidenav-content {
+    overflow: hidden !important;
+}
+
+.img__icon {
+    cursor: pointer;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU");
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-position: center;
+}
+
+.menu__name {
+    padding-left: 10px;
+}
+
+.main__app {
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 100px;
+}

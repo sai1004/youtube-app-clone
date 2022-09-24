@@ -1,0 +1,25 @@
+<mat-card class="video__card">
+    <img
+        class="video__poster"
+        src="https://i.ytimg.com/vi/As8HuFcAHIo/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPBEKHCZuwAzYKJ__SAvjG9HV8Zw"
+        alt="img"
+    />
+    <div class="content">
+        <div class="flex__row">
+            <div>
+                <img
+                    class="channel__icon"
+                    src="https://yt3.ggpht.com/ytc/AMLnZu9XGUotiX-6NfTEUKwRbgMdi-9nSwgogsReo8FR0g=s68-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                />
+            </div>
+            <div>
+                <h5>{{ video.title }}</h5>
+                <h6>{{ video.channelName }}</h6>
+                <h6>
+                    {{ video.views }} views . <span> {{ video.updateDate }} </span>
+                </h6>
+            </div>
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,37 @@
+.video__card {
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+    padding: 0;
+    box-shadow: none;
+    overflow: hidden;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.15);
+        transition: transform 1s ease;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        z-index: 999;
+    }
+
+    .video__poster {
+        height: 166px;
+        width: 100%;
+    }
+
+    .content {
+        padding: 6px;
+        .channel__icon {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.flex__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+}

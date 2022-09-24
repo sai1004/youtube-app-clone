@@ -1,0 +1,41 @@
+<section class="container">
+    <div class="explore__page">
+        <div class="categories_group">
+            <div fxLayout="row warp" fxLayoutAlign="start space-around" fxLayoutGap="6px">
+                <ng-container *ngFor="let item of categoriesList">
+                    <div fxFlex="20">
+                        <mat-card>
+                            <mat-icon> {{ item.icon }} </mat-icon>
+                            <h4>{{ item.name }}</h4>
+                        </mat-card>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <div class="videos">
+            <h4>Trending videos</h4>
+            <div class="video__box">
+                <div fxLayout="row warp" fxLayoutAlign="start space-around">
+                    <div fxFlex="24">
+                        <video controls class="video" poster="../../../../assets/poster.png">
+                            <source src="../../../../assets/video.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                    <div fxFlex="70">
+                        <div class="video__content">
+                            <h3>
+                                Maja Ma - Official Trailer | Madhuri Dixit, Gajraj Rao, Ritwik B, Barkha S, Srishti S |
+                                Prime Video
+                            </h3>
+                            <h5><span> Channel Name </span> 12k views . 1 day ago</h5>
+                            <h6>
+                                Go to ecb.co.uk to join We Are England Cricket Supporters for free and get priority
+                                access to tickets and much more!
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

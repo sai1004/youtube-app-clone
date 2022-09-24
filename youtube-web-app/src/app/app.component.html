@@ -1,0 +1,56 @@
+<mat-toolbar color="primary" *ngIf="isShowNavbar">
+    <!-- (click)="snav.toggle()" -->
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span> {{ title }} </span>
+    <span class="mat-spacer"></span>
+    <div>
+        <input type="text" class="search__query" placeholder="Search" />
+    </div>
+    <button mat-icon-button>
+        <mat-icon>mic_none</mat-icon>
+    </button>
+    <span class="mat-spacer"></span>
+    <button mat-icon-button>
+        <mat-icon>video_call</mat-icon>
+    </button>
+    <button mat-icon-button color="accent">
+        <mat-icon matBadge="4" matBadgeOverlap="false" matBadgeColor="accent">notifications_none</mat-icon>
+    </button>
+
+    <button mat-stroked-button color="accent" routerLink="/auth/signin">
+        <mat-icon>person_outline</mat-icon> SIGN IN
+    </button>
+    <!-- <div class="img__icon" [matMenuTriggerFor]="menu"></div>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu> -->
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav
+        #snav
+        role="navigation"
+        [opened]="screenWidth > 840"
+        [mode]="screenWidth > 840 ? 'side' : 'over'"
+        class="side-nav-bg"
+        *ngIf="isShowNavbar"
+    >
+        <mat-nav-list>
+            <ng-container *ngFor="let menu of menusList">
+                <mat-list-item [routerLink]="menu.route" routerLinkActive="active__route">
+                    <mat-icon>{{ menu.icon }}</mat-icon>
+                    <span class="menu__name">{{ menu.name }}</span>
+                </mat-list-item>
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main class="main__app">
+            <router-outlet></router-outlet>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
